@@ -5,6 +5,11 @@
   --color-headings: #1b0760;
   --color-body: #918ca4;
 }
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 /* Typography */
 html {
   font-size: 62.5%;
@@ -58,25 +63,25 @@ p {
 a {
   text-decoration: none;
 }
-.link-arrow{
+.link-arrow {
   color: var(--color-accent);
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: bold;
 }
 
-.link-arrow::after{
-  content: '-->';
+.link-arrow::after {
+  content: "-->";
   margin-left: 5px;
   transition: margin 0.15s;
 }
 
-.link-arrow:hover::after{
+.link-arrow:hover::after {
   margin-left: 10px;
 }
 
 @media screen and (mid-width: 1024px) {
-  .link-arrow{
+  .link-arrow {
     font-size: 1.5rem;
   }
 }
@@ -91,7 +96,7 @@ a {
 
 .badge--primary {
   background: var(--color-primary);
-  color:#fff;
+  color: #fff;
 }
 
 .badge--secondary {
@@ -102,7 +107,6 @@ a {
 .badge--small {
   font-size: 1.6rem;
 }
-
 
 @media screen and (min-width: 1024px) {
   .badge {
@@ -120,7 +124,7 @@ a {
   color: var(--color-headings);
 }
 
-.list--inline .list__item{
+.list--inline .list__item {
   display: inline-block;
   margin-right: 2rem;
 }
@@ -139,7 +143,6 @@ a {
   .list--tick .list__item {
     padding-left: 0;
   }
-  
 }
 
 /* Icons */
@@ -153,11 +156,72 @@ a {
 }
 
 .icon-container {
+  align-items: center;
   background: #f3f9fa;
-  width: 64px;
-  height: 64px;
   border-radius: 100%;
   display: inline-flex;
+  height: 64px;
   justify-content: center;
-  align-items: center;
+  width: 64px;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 50px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  padding: 2rem 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: blue;
+}
+
+.btn--secondary {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.btn--secondary:hover {
+  background: #12c3e2;
+}
+
+.btn--accent {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.btn--accent:hover {
+  background: rgb(233, 7, 7);
+}
+
+.btn--block {
+  width: 100%;
+  display: inline-block;
+}
+.btn--outline {
+  background: var(--color-headings);
+  color: #fff;
+  border: 2px solid var(--color-headings);
+}
+.btn--outline:hover {
+  background: rgb(6, 6, 44);
+  color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn{
+    font-size: 1.5rem;
+  }
 }
