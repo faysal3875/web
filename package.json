@@ -1,0 +1,26 @@
+{
+  "name": "PhotoshopDesignToWeb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "socket.io": "^4.4.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faysal3875/responsiveWebsite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/faysal3875/responsiveWebsite/issues"
+  },
+  "homepage": "https://github.com/faysal3875/responsiveWebsite#readme"
+}
